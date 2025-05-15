@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 72 70% 98%;
+    --foreground: 72 10% 10%;
+
+    --card: 72 70% 98%;
+    --card-foreground: 72 10% 10%;
+
+    --popover: 72 70% 98%;
+    --popover-foreground: 72 10% 10%;
+
+    --primary: 72 60% 64%;
+    --primary-foreground: 72 10% 10%;
+
+    --secondary: 72 30% 96%;
+    --secondary-foreground: 72 10% 30%;
+
+    --muted: 72 20% 92%;
+    --muted-foreground: 72 10% 40%;
+
+    --accent: 72 30% 92%;
+    --accent-foreground: 72 10% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 72 20% 88%;
+    --input: 72 20% 88%;
+    --ring: 72 60% 64%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 72 10% 10%;
+    --foreground: 72 30% 96%;
+
+    --card: 72 10% 12%;
+    --card-foreground: 72 30% 96%;
+
+    --popover: 72 10% 12%;
+    --popover-foreground: 72 30% 96%;
+
+    --primary: 72 60% 64%;
+    --primary-foreground: 72 10% 10%;
+
+    --secondary: 72 10% 20%;
+    --secondary-foreground: 72 30% 96%;
+
+    --muted: 72 10% 20%;
+    --muted-foreground: 72 30% 70%;
+
+    --accent: 72 10% 20%;
+    --accent-foreground: 72 30% 96%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 72 30% 96%;
+
+    --border: 72 10% 20%;
+    --input: 72 10% 20%;
+    --ring: 72 60% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Markdown content styles */
+.markdown-content img {
+  @apply my-4 rounded-lg;
+}
+
+.markdown-content table {
+  @apply w-full border-collapse my-4;
+}
+
+.markdown-content th {
+  @apply bg-muted p-2 text-left font-semibold;
+}
+
+.markdown-content td {
+  @apply border-b border-border p-2 text-muted-foreground;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-primary pl-4 italic text-muted-foreground my-4;
+}
+
+.markdown-content pre {
+  @apply rounded-lg overflow-auto my-4;
+}
+
+.markdown-content code {
+  @apply text-sm;
+}
+
+.markdown-content :not(pre) > code {
+  @apply bg-muted px-1.5 py-0.5 rounded-md text-sm font-mono;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  @apply font-bold tracking-tight;
+}
+
+.markdown-content h1 {
+  @apply text-3xl mt-6 mb-4;
+}
+
+.markdown-content h2 {
+  @apply text-2xl mt-6 mb-3;
+}
+
+.markdown-content h3 {
+  @apply text-xl mt-5 mb-2;
+}
+
+.markdown-content h4 {
+  @apply text-lg mt-4 mb-2;
+}
+
+.markdown-content ul {
+  @apply mb-4 ml-6 list-disc text-muted-foreground;
+}
+
+.markdown-content ol {
+  @apply mb-4 ml-6 list-decimal text-muted-foreground;
+}
+
+.markdown-content li {
+  @apply mb-1;
+}
+
+.markdown-content p {
+  @apply mb-4 text-muted-foreground;
+}
+
+.markdown-content a {
+  @apply text-primary hover:underline;
+}
+
+.markdown-content hr {
+  @apply my-6 border-border;
+}
